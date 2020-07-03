@@ -1,0 +1,9 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Dedelang\\": "vendor/Dedelang",
+            "Controllers\\": "App/Controllers",
+            "Models\\": "App/Models"
+        }
+    }
+}

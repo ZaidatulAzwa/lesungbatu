@@ -1,0 +1,51 @@
+.contain {
+  margin:0 auto;
+  width:100%;
+  overflow:auto;
+}
+
+table.gridtable {
+  margin:0 auto;
+  width:95%;
+  overflow:auto;
+  font-size: 18px;
+  font-family: helvetica, Arial, sans-serif;;
+  text-align: center;
+  border-width: 1px;
+  border-color: #666666;
+  border-collapse: collapse;
+}
+
+table.gridtable th {
+  border-width: 1px;
+  padding: 8px;
+  border-style: solid;
+  border-color: #666666;
+  }
+
+table.gridtable td {
+  border-width: 1px;
+  width: 2px;
+  padding: 8px;
+  border-style: solid;
+  border-color: #666666;
+}
+
+.error {
+  color: white;
+  background-color: red;
+}
+
+.btn {
+  background-color: Black; /* Blue background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 12px 16px; /* Some padding */
+  font-size: 16px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: white;
+}

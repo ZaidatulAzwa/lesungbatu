@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Kegemaran</title>
+    <title>Kegemaran Saya</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -41,58 +41,25 @@
 	          <li class="nav-item active"><a href="/lesungbatu/users" class="nav-link">Laman Utama</a></li>
             <li class="nav-item"><a href="bahanmasakan" class="nav-link">Bahan Masakan</a></li>
 	          <li class="nav-item"><a href="jenismasakan" class="nav-link">Jenis Masakan</a></li>
-	          <li class="nav-item"><a href="kegemaranuser" class="nav-link">Kegemaran</a></li>
+	          <li class="nav-item"><a href="/lesungbatu/kegemaranusers/1" class="nav-link">Kegemaran</a></li>
 	        </ul>
 	      </div>
 		  </div>
 	  </nav>
     <!-- END nav -->
 
-    <section class="home-slider owl-carousel img" style="background-image: url(/lesungbatu/public/images/bg_1.jpg);">
-      <div class="slider-item">
-      	<div class="overlay"></div>
-        <div class="container">
-          <div class="row slider-text align-items-center" data-scrollax-parent="true">
-
-            <div class="col-md-6 col-sm-12 ftco-animate">
-              <span class="subheading">Keenakan Dirasa</span>
-              <h1 class="mb-4">Dapatkan resepi menarik mengikut bahan masakan anda !</h1>
-            </div>
-            <div class="col-md-6 ftco-animate">
-              <img src="/lesungbatu/public/images/gif1.gif" class="img-fluid" alt="">
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="slider-item">
+    <section  style="background-image: url(/lesungbatu/public/images/bg_1.jpg);height:600px">
+      <div class="slider-item"><br><br><br><br>
         <div class="overlay"></div>
         <div class="container">
           <div class="row slider-text align-items-center" data-scrollax-parent="true">
-
-            <div class="col-md-6 col-sm-12 order-md-last ftco-animate">
-              <span class="subheading">Kerangupan Terasa</span>
-              <h1 class="mb-4">Resepi terhebat dengan bahan masakan sedia ada !</h1>
-            </div>
+            <div class="col-md-6 col-sm-12 ftco-animate" style="text-align:center;">
+              <span class="subheading"><h1  style="font-style: bold">Keenakan Dirasa</h1></span><br>
+              <h3 class="mb-4"  style="font-style: italic">Dapatkan resepi menarik mengikut bahan masakan anda </h3>
+              </div>
             <div class="col-md-6 ftco-animate">
-              <img src="/lesungbatu/public/images/gif.gif" class="img-fluid" alt="">
+              <img src="/lesungbatu/public/images/gif1.gif" class="img-fluid" alt="" >
             </div>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="slider-item" style="background-image: url(/lesungbatu/public/images/bg_3.jpg);">
-      	<div class="overlay"></div>
-        <div class="container">
-          <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
-
-            <div class="col-md-7 col-sm-12 text-center ftco-animate">
-            	<span class="subheading">LesungBatu Terhebat</span>
-              <h1 class="mb-4">Resepi disedia mudah, masakan anda juga menjadi mudah !</h1>
-            </div>
-
           </div>
         </div>
       </div>
@@ -104,18 +71,18 @@
           <div class="info">
             <div class="row no-gutters">
               <div class="col-md-4 d-flex ftco-animate">
-          <div class="icon"><span class="icon-phone"></span></div>
+          <div class="icon"><span class="icon-signout"></span></div>
           <div class="dropup">
           <button class="dropbtn"><a href="logout" id="customer_login_link"  style="color:white">Logout</a></button>
           </div>
         </div>
         <div class="col-md-4 d-flex ftco-animate">
-          <div class="icon"><span class="icon-my_location"></span></div>
+          <div class="icon"><span class="icon-profile"></span></div>
           <div class="dropup">
           <button class="dropbtn">Profile</button>
           <div class="dropup-content">
-            <a href="update/yourusername">Update Profile</a>
-            <a href="delete/success">Delete Profile</a>
+            <a href="update/zaidatul">Update Profile</a>
+            <a href="delete/zaidatul">Delete Profile</a>
           </div>
         </div>
         </div>
@@ -139,23 +106,16 @@
           <div class="col-md-7 heading-section ftco-animate text-center">
             <h2 class="mb-4">Kegemaran Saya !</h2>
             <div class="contain">
-              <?php
-              echo "<table>";
-              echo "<tr>";
-              echo "<th> Resepi Pilihan !</th>";
-              echo "<th> Klik Link !</th>";
-
-              foreach ($singleRow as $single){
-                  //$value->course_name;
-
-                  echo "<tr>";
-                  echo "<td> $single->recipe_title </td>";
-                  echo "<td><a href=$single->recipe_link><font color=#3498DB>Dapatkan!</font></a></td>";
-                  echo "</tr>";
-              }
-              echo "</tr>";
-              echo "</table>";
-              ?>
+              <table>
+                <tr>
+                  <th> Resepi Pilihan !</th>
+                  <th> Klik Link !</th>
+                </tr>
+                <tr>
+              <td><?php echo $dataResult->recipe_title;?> </td>
+              <td><a href=<?php echo $dataResult->recipe_link;?> style="color:#3498DB">Dapatkan!</a></td>
+            </tr>
+          </table>
             <style>
             .contain {
               margin:0 auto;

@@ -21,11 +21,13 @@ class bahanmasakanModel{
   }
 
 	public static function getOneRow(){
-		 $result = Query::table('bahanmasakan')
-						 ->select('*')
-						 ->getOne();
+		$recipe_title = Request::get('p1');
+		$result = Query::table('bahanmasakan')
+						->select('*')
+						->where('recipe_title','=',$recipe_title)
+						->getOne();
 
-			return $result;
+		 return $result;
 	}
 
   public static function insert(){

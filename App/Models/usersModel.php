@@ -65,15 +65,28 @@ class usersModel{
         return $result;
     }
 
-    public static function getOneRow(){
-       $recipe_title = Request::get('p1');
+    public static function get(){
+
+       $recipe_id = Request::get('p1');
        $result = Query::table('bahanmasakan')
                ->select('*')
-               ->where('recipe_title','=',$recipe_title)
+               ->where('recipe_id','=',$recipe_id)
                ->getOne();
 
         return $result;
    }
+
+   public static function get1(){
+
+      $recipe_id = Request::get('p1');
+      $result1 = Query::table('melayu')
+              ->select('*')
+              ->where('recipe_id','=',$recipe_id)
+              ->getOne();
+
+       return $result1;
+  }
+
 
  public static function getAll(){
 

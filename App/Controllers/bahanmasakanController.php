@@ -20,10 +20,11 @@ class bahanmasakanController{
 	}
 
 	public static function resepi(){
-				 $dataResult = usersModel::getoneRow();
+				 $dataResult = bahanmasakanModel::getoneRow();
 
 					view::render('bahanmasakan/resepi',['singleRow'=>$dataResult]);
 
 	}
+
 }
 ?>

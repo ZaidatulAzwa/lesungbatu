@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Login</title>
+    <title>Senarai Pengguna</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -39,61 +39,29 @@
 		      </button>
           <div class="collapse navbar-collapse" id="ftco-nav">
   	        <ul class="navbar-nav ml-auto">
-  	          <li class="nav-item active"><a href="/lesungbatu" class="nav-link">Laman Utama</a></li>
-              <li class="nav-item"><a href="bahanmasakan" class="nav-link">Bahan Masakan</a></li>
-  	          <li class="nav-item"><a href="jenismasakan" class="nav-link">Jenis Masakan</a></li>
-  	          <li class="nav-item"><a href="kegemaran" class="nav-link">Kegemaran</a></li>
+  	          <li class="nav-item active"><a href="/lesungbatu/users" class="nav-link">Laman Utama</a></li>
+              <li class="nav-item"><a href="lesungbatu/bahanmasakan" class="nav-link">Bahan Masakan</a></li>
+  	          <li class="nav-item"><a href="lesungbatu/jenismasakan" class="nav-link">Jenis Masakan</a></li>
+  	          <li class="nav-item"><a href="lesungbatu/kegemaran" class="nav-link">Kegemaran</a></li>
   	        </ul>
   	      </div>
   		  </div>
   	  </nav>
       <!-- END nav -->
 
-      <section class="home-slider owl-carousel img" style="background-image: url(/lesungbatu/public/images/bg_1.jpg);">
-        <div class="slider-item">
+      <section  style="background-image: url(/lesungbatu/public/images/bg_1.jpg);height:600px">
+        <div class="slider-item"><br><br><br><br>
         	<div class="overlay"></div>
           <div class="container">
             <div class="row slider-text align-items-center" data-scrollax-parent="true">
 
-              <div class="col-md-6 col-sm-12 ftco-animate">
-                <span class="subheading">Keenakan Dirasa</span>
-                <h1 class="mb-4">Dapatkan resepi menarik mengikut bahan masakan anda !</h1>
-              </div>
+              <div class="col-md-6 col-sm-12 ftco-animate" style="text-align:center;">
+              	<span class="subheading"><h1  style="font-style: bold">Keenakan Dirasa</h1></span><br>
+                <h3 class="mb-4"  style="font-style: italic">Dapatkan resepi menarik mengikut bahan masakan anda </h3>
+                </div>
               <div class="col-md-6 ftco-animate">
-                <img src="/lesungbatu/public/images/gif1.gif" class="img-fluid" alt="">
+              	<img src="/lesungbatu/public/images/gif1.gif" class="img-fluid" alt="" >
               </div>
-
-            </div>
-          </div>
-        </div>
-
-        <div class="slider-item">
-          <div class="overlay"></div>
-          <div class="container">
-            <div class="row slider-text align-items-center" data-scrollax-parent="true">
-
-              <div class="col-md-6 col-sm-12 order-md-last ftco-animate">
-                <span class="subheading">Kerangupan Terasa</span>
-                <h1 class="mb-4">Resepi terhebat dengan bahan masakan sedia ada !</h1>
-              </div>
-              <div class="col-md-6 ftco-animate">
-                <img src="/lesungbatu/public/images/gif.gif" class="img-fluid" alt="">
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-        <div class="slider-item" style="background-image: url(/lesungbatu/public/images/bg_3.jpg);">
-        	<div class="overlay"></div>
-          <div class="container">
-            <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
-
-              <div class="col-md-7 col-sm-12 text-center ftco-animate">
-              	<span class="subheading">LesungBatu Terhebat</span>
-                <h1 class="mb-4">Resepi disedia mudah, masakan anda juga menjadi mudah !</h1>
-              </div>
-
             </div>
           </div>
         </div>

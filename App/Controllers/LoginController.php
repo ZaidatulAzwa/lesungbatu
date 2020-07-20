@@ -40,7 +40,7 @@ class LoginController{
 
 			Auth::doRegister('users');
 
-			View::render('login/Login');
+			View::render('login/login');
 
 		}else{
 
@@ -59,7 +59,7 @@ class LoginController{
 	 public static function update(){
 			 if (http_method()==="POST"):
 
-					$dataResult = loginModel::updated();
+					$dataResult = loginModel::update();
 
 					 self::listed();
 
@@ -72,6 +72,11 @@ class LoginController{
 			 //pre($dataResult);
 	 }
 
+	 public static function profile(){
+				//pre($dataResult);
+				view::render('login/profile');
+		}
+
 	 public static function remove(){
 			 $dataResult = loginModel::delete();
 			 pre($dataResult);
@@ -79,7 +84,7 @@ class LoginController{
 
 	public static function Logout(){
 
-		Auth::logout('login');
+		Auth::logout('');
 
 	}
 

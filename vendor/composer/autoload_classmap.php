@@ -6,23 +6,4 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Controllers\\UserController' => $baseDir . '/App/Controllers/UserController.php',
-    'Controllers\\WelcomeController' => $baseDir . '/App/Controllers/WelcomeController.php',
-    'Dedelang\\Engine\\Application' => $vendorDir . '/Dedelang/Engine/Application.php',
-    'Dedelang\\Engine\\Controller' => $vendorDir . '/Dedelang/Engine/Controller.php',
-    'Dedelang\\Engine\\DB\\Knex' => $vendorDir . '/Dedelang/Engine/DB/Knex.php',
-    'Dedelang\\Engine\\DB\\Query' => $vendorDir . '/Dedelang/Engine/DB/Query.php',
-    'Dedelang\\Engine\\DotEnv\\DotEnv' => $vendorDir . '/Dedelang/Engine/DotEnv/DotEnv.php',
-    'Dedelang\\Engine\\Loader' => $vendorDir . '/Dedelang/Engine/Loader.php',
-    'Dedelang\\Engine\\Route' => $vendorDir . '/Dedelang/Engine/Route.php',
-    'Dedelang\\Engine\\Security\\Attack' => $vendorDir . '/Dedelang/Engine/Security/Attack.php',
-    'Dedelang\\Engine\\URL' => $vendorDir . '/Dedelang/Engine/URL.php',
-    'Dedelang\\Engine\\Validate' => $vendorDir . '/Dedelang/Engine/Validate.php',
-    'Dedelang\\Http\\Cookie' => $vendorDir . '/Dedelang/Http/Cookie.php',
-    'Dedelang\\Http\\Request' => $vendorDir . '/Dedelang/Http/Request.php',
-    'Dedelang\\Http\\Session' => $vendorDir . '/Dedelang/Http/Session.php',
-    'Dedelang\\Http\\Url' => $vendorDir . '/Dedelang/Http/Url.php',
-    'Dedelang\\Library\\Authentication' => $vendorDir . '/Dedelang/Library/Authentication.php',
-    'Dedelang\\View\\Html' => $vendorDir . '/Dedelang/View/Html.php',
-    'Dedelang\\View\\View' => $vendorDir . '/Dedelang/View/View.php',
 );

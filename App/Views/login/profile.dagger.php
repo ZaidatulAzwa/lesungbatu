@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Update</title>
+    <title>Profile</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -27,6 +27,8 @@
     <link rel="stylesheet" href="/lesungbatu/public/css/flaticon.css">
     <link rel="stylesheet" href="/lesungbatu/public/css/icomoon.css">
     <link rel="stylesheet" href="/lesungbatu/public/css/style.css">
+    <link rel="stylesheet" href="/lesungbatu/public/css/navigation.css">
+    <link rel="stylesheet" href="/lesungbatu/public/css/jenismasakan.css">
   </head>
   <body>
   	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
@@ -36,11 +38,11 @@
 		        <span class="oi oi-menu"></span> Menu
 		      </button>
           <div class="collapse navbar-collapse" id="ftco-nav">
-            <ul class="navbar-nav ml-auto">
-  	          <li class="nav-item active"><a href="/lesungbatu/users" class="nav-link">Laman Utama</a></li>
-              <li class="nav-item"><a href="/lesungbatu/bahanmasakan" class="nav-link">Bahan Masakan</a></li>
-  	          <li class="nav-item"><a href="/lesungbatu/jenismasakan" class="nav-link">Jenis Masakan</a></li>
-  	          <li class="nav-item"><a href="/lesungbatu/kegemaran" class="nav-link">Kegemaran</a></li>
+  	        <ul class="navbar-nav ml-auto">
+  	          <li class="nav-item active"><a href="/lesungbatu" class="nav-link">Laman Utama</a></li>
+              <li class="nav-item"><a href="bahanmasakan" class="nav-link">Bahan Masakan</a></li>
+  	          <li class="nav-item"><a href="jenismasakan" class="nav-link">Jenis Masakan</a></li>
+  	          <li class="nav-item"><a href="kegemaran" class="nav-link">Kegemaran</a></li>
   	        </ul>
   	      </div>
   		  </div>
@@ -52,77 +54,39 @@
         <div class="container">
           <div class="row justify-content-center mb-5 pb-3">
             <div class="col-md-7 heading-section ftco-animate text-center">
-              <center>
-                  <h1 style="color:black"> Update Profile </h1><br>
-                  <form action="<?php echo base_url('update/').$singleRow->user_id; ?>" method="post">
-                      <?php Html::csrf(); ?>
-                      <input type="text" name="name" value="<?php echo $singleRow->user_username;?>">
-                      <input type="submit" name="search" value="Search" style="font-weight:bold" class="ml-2 btn btn-white btn-outline-black"/> <br><br>
-                      <div class="form-group">
-                        <label for="email"><b>New Email:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                          &nbsp&nbsp&nbsp</b></label>
-                      <input type="text" name="email">
-                    </div>
-                    <div class="form-group">
-                      <label for="email"><b>New Username:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b></label>
-                       <input type="text" name="name">
-                     </div>
-                     <div class="form-group">
-                       <label for="email"><b>New Password:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</b></label>
-                       <input type="password" name="new_password" required>
-                     </div>
-                     <div class="form-group">
-                       <label for="email"><b>Confirm Password:&nbsp</b></label>
-                       <input type="password" name="confirm_password" required>
-                     </div><br>
-                    <input type="submit" style="font-weight:bold" class="ml-2 btn btn-white btn-outline-black" value="Update">
-                  </form>
-              </center>
-      		</div>
+              <h2 class="mb-4">Profile Saya</h2>
+              <form action="" method="POST">
+                  <input type="text" name="name" placeholder="Insert your username">
+                  <input type="submit" name="search" value="Search" style="font-weight:bold" class="ml-2 btn btn-white btn-outline-black"/> <br><br>
+              </form>
+                  <?php
+                    $connection = mysqli_connect("localhost", "lesungbatu", "root", "");
+                    $db = mysqli_select_db($connection, 'users');
+
+                    if(isset($_POST['search']))
+                    {
+                      $user_username = $_POST['user_username'];
+
+                      $query = "SELECT * FROM users where user_username = '$user_username'";
+                      $query_run = mysqli_query($connection, 'users');
+
+                      while($row = mysqli_fetch_array($query_run))
+                      {
+                        ?>
+                          <form action="" method="POST">
+                            <input type="text" name="user_email" value="<?php echo $row['user_email']?>">
+                            <input type="text" name="user_username" value="<?php echo $row['user_username']?>">
+                            <input type="text" name="user_password" value="<?php echo $row['user_password']?>">
+                          <input type="submit" name="update" style="font-weight:bold" class="ml-2 btn btn-white btn-outline-black" value="Update">
+                        </form>
+                        <?php
+                      }
+                    }
+                    ?>
       	</div>
       	</div>
+      </div>
       </section>
-
-  <style>
-  .dropbtn {
-    background-color: black;
-    color:  white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-  }
-
-  .dropup {
-    position: relative;
-    display: inline-block;
-  }
-
-  .dropup-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    bottom: 50px;
-    z-index: 1;
-  }
-
-  .dropup-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-
-  .dropup-content a:hover {background-color:white}
-
-  .dropup:hover .dropup-content {
-    display: block;
-  }
-
-  .dropup:hover .dropbtn {
-    background-color: black;
-  }
-  </style>
 
   <script src="/lesungbatu/public/js/jquery.min.js"></script>
   <script src="/lesungbatu/public/js/jquery-migrate-3.0.1.min.js"></script>
@@ -144,3 +108,27 @@
 
   </body>
 </html>
+
+<?php
+  $connection = mysqli_connect("localhost", "lesungbatu", "root", "");
+  $db = mysqli_select_db($connection, 'users');
+
+  if(isset($_POST['update']))
+  {
+    $user_username = $_POST['user_username'];
+    $user_email = $_POST['user_email'];
+    $user_password = $_POST['user_password'];
+
+    $query = "UPDATE 'users' SET user_username='$_POST[user_username]', user_email='$_POST[user_email]', user_password='$_POST[user_password]' where user_username='$_POST[user_username]'";
+    $query_run = mysqli_query($connection, $query);
+
+    if($query_run)
+    {
+      echo '<script> alert("Data Updated") </script>';
+    }
+    else
+    {
+      echo '<script> alert("Data Not Updated") </script>';
+    }
+  }
+ ?>

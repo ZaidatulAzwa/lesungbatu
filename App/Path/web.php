@@ -15,6 +15,8 @@ Route::set('register','Login@register');
 
 Route::set('updateprofile','login@updateProfile');
 
+Route::set('profile','login@profile');
+
 Route::authorization(['users'],'login')->set('update/@username','Login@update');
 
 Route::authorization(['users'],'login')->set('users','users@index');
@@ -37,7 +39,7 @@ Route::set('MasakanIndian','users@u8');
 
 Route::set('resepiuser','users@u9');
 
-Route::set('kegemaranusers','users@u10');
+Route::set('kegemaranusers/@id','users@k');
 
 Route::set('bahan-masakan','bahanmasakan@index');
 

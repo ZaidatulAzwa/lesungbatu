@@ -6,6 +6,8 @@ use Dedelang\Engine\DB\Query;
 
 use Dedelang\Http\Request;
 
+use Dedelang\Engine\Validate;
+
 class loginModel{
 
   public static function getAll(){
@@ -16,6 +18,17 @@ class loginModel{
 
       return $result;
   }
+
+  public static function get(){
+
+     $user_id = Request::get('p1');
+     $result = Query::table('users')
+             ->select('*')
+             ->where('user_id','=',$user_id)
+             ->getOne();
+
+      return $result;
+ }
 
   public static function update(){
       $id = Request::get('p1');
@@ -41,10 +54,10 @@ class loginModel{
   }
 
    public static function getOneRow(){
-      $username = Request::get('p1');
+      $user_id = Request::get('p1');
       $result = Query::table('users')
               ->select('*')
-              ->where('user_username','=',$username)
+              ->where('user_id','=',$user_id)
               ->getOne();
 
        return $result;

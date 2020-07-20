@@ -59,50 +59,18 @@
     </nav>
       <!-- END nav -->
 
-      <section class="home-slider owl-carousel img" style="background-image: url(/lesungbatu/public/images/bg_1.jpg);">
-        <div class="slider-item">
+      <section  style="background-image: url(/lesungbatu/public/images/bg_1.jpg);height:600px">
+        <div class="slider-item"><br><br><br><br>
         	<div class="overlay"></div>
           <div class="container">
             <div class="row slider-text align-items-center" data-scrollax-parent="true">
-
-              <div class="col-md-6 col-sm-12 ftco-animate">
-                <span class="subheading">Keenakan Dirasa</span>
-                <h1 class="mb-4">Dapatkan resepi menarik mengikut bahan masakan anda !</h1>
-              </div>
+              <div class="col-md-6 col-sm-12 ftco-animate" style="text-align:center;">
+              	<span class="subheading"><h1  style="font-style: bold">Keenakan Dirasa</h1></span><br>
+                <h3 class="mb-4"  style="font-style: italic">Dapatkan resepi menarik mengikut bahan masakan anda </h3>
+                </div>
               <div class="col-md-6 ftco-animate">
-                <img src="/lesungbatu/public/images/gif1.gif" class="img-fluid" alt="">
+              	<img src="/lesungbatu/public/images/gif1.gif" class="img-fluid" alt="" >
               </div>
-
-            </div>
-          </div>
-        </div>
-
-        <div class="slider-item">
-          <div class="overlay"></div>
-          <div class="container">
-            <div class="row slider-text align-items-center" data-scrollax-parent="true">
-
-              <div class="col-md-6 col-sm-12 order-md-last ftco-animate">
-                <span class="subheading">Kerangupan Terasa</span>
-                <h1 class="mb-4">Resepi terhebat dengan bahan masakan sedia ada !</h1>
-              </div>
-              <div class="col-md-6 ftco-animate">
-                <img src="/lesungbatu/public/images/gif.gif" class="img-fluid" alt="">
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="slider-item" style="background-image: url(/lesungbatu/public/images/bg_3.jpg);">
-        	<div class="overlay"></div>
-          <div class="container">
-            <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
-
-              <div class="col-md-7 col-sm-12 text-center ftco-animate">
-              	<span class="subheading">LesungBatu Terhebat</span>
-                <h1 class="mb-4">Resepi disedia mudah, masakan anda juga menjadi mudah !</h1>
-              </div>
-
             </div>
           </div>
         </div>
@@ -125,8 +93,8 @@
                   //$value->course_name;
 
                   echo "<tr>";
-                  echo "<td> $recipe_id->recipe_title </td>";
-                  echo "<td><a href=$recipe_id->recipe_link><font color=#3498DB>Dapatkan!</font></a></td>";
+                  echo "<td> $recipe_id->recipe_title</td>";
+                  echo "<td><a href=$recipe_id->recipe_link = 1><font color=#3498DB>Dapatkan!</font></a></td>";
                   echo "</tr>";
               }
               echo "</tr>";
@@ -222,6 +190,16 @@
   function closeNav() {
     document.getElementById("myNav").style.height = "0%";
   }
+  </script>
+
+  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+  <script>
+    window.OneSignal = window.OneSignal || [];
+    OneSignal.push(function() {
+      OneSignal.init({
+        appId: "a112f057-a98c-4a99-95ef-b6e14bef1d78",
+      });
+    });
   </script>
 
   <script src="/lesungbatu/public/js/forwardchaining.js"></script>

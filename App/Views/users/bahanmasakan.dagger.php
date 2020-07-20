@@ -49,51 +49,18 @@
 	  </nav>
     <!-- END nav -->
 
-    <section class="home-slider owl-carousel img" style="background-image: url(/lesungbatu/public/images/bg_1.jpg);">
-      <div class="slider-item">
-      	<div class="overlay"></div>
-        <div class="container">
-          <div class="row slider-text align-items-center" data-scrollax-parent="true">
-
-            <div class="col-md-6 col-sm-12 ftco-animate">
-              <span class="subheading">Keenakan Dirasa</span>
-              <h1 class="mb-4">Dapatkan resepi menarik mengikut bahan masakan anda !</h1>
-            </div>
-            <div class="col-md-6 ftco-animate">
-              <img src="/lesungbatu/public/images/gif1.gif" class="img-fluid" alt="">
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="slider-item">
+    <section  style="background-image: url(/lesungbatu/public/images/bg_1.jpg);height:600px">
+      <div class="slider-item"><br><br><br><br>
         <div class="overlay"></div>
         <div class="container">
           <div class="row slider-text align-items-center" data-scrollax-parent="true">
-
-            <div class="col-md-6 col-sm-12 order-md-last ftco-animate">
-              <span class="subheading">Kerangupan Terasa</span>
-              <h1 class="mb-4">Resepi terhebat dengan bahan masakan sedia ada !</h1>
-            </div>
+            <div class="col-md-6 col-sm-12 ftco-animate" style="text-align:center;">
+              <span class="subheading"><h1  style="font-style: bold">Keenakan Dirasa</h1></span><br>
+              <h3 class="mb-4"  style="font-style: italic">Dapatkan resepi menarik mengikut bahan masakan anda </h3>
+              </div>
             <div class="col-md-6 ftco-animate">
-              <img src="/lesungbatu/public/images/gif.gif" class="img-fluid" alt="">
+              <img src="/lesungbatu/public/images/gif1.gif" class="img-fluid" alt="" >
             </div>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="slider-item" style="background-image: url(/lesungbatu/public/images/bg_3.jpg);">
-      	<div class="overlay"></div>
-        <div class="container">
-          <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
-
-            <div class="col-md-7 col-sm-12 text-center ftco-animate">
-            	<span class="subheading">LesungBatu Terhebat</span>
-              <h1 class="mb-4">Resepi disedia mudah, masakan anda juga menjadi mudah !</h1>
-            </div>
-
           </div>
         </div>
       </div>
@@ -105,18 +72,18 @@
           <div class="info">
             <div class="row no-gutters">
               <div class="col-md-4 d-flex ftco-animate">
-          <div class="icon"><span class="icon-phone"></span></div>
+          <div class="icon"><span class="icon-signout"></span></div>
           <div class="dropup">
           <button class="dropbtn"><a href="logout" id="customer_login_link"  style="color:white">Logout</a></button>
           </div>
         </div>
         <div class="col-md-4 d-flex ftco-animate">
-          <div class="icon"><span class="icon-my_location"></span></div>
+          <div class="icon"><span class="icon-profile"></span></div>
           <div class="dropup">
           <button class="dropbtn">Profile</button>
           <div class="dropup-content">
-            <a href="update/yourusername">Update Profile</a>
-            <a href="delete/success">Delete Profile</a>
+            <a href="update/zaidatul">Update Profile</a>
+            <a href="delete/zaidatul">Delete Profile</a>
           </div>
         </div>
         </div>
@@ -134,125 +101,184 @@
     </section>
 
     <section class="ftco-section ftco-services">
-    	<div class="overlay"></div>
-    	<div class="container">
-    		<div class="row justify-content-center mb-5 pb-3">
+      <form method="get" action="resepiuser" onsubmit="return resepi()">
+        <div class="checkmark">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section ftco-animate text-center">
-            <h2 class="mb-4">Pilih Bahan Masakan Anda ! </h2>
+            <h2 class="mb-4">Pilih Bahan Masakan Anda !</h2>
           </div>
         </div>
-            <div class="media d-block text-center block-6 services">
-              <div class="media-body">
-                  <form method="get" action="resepiuser">
-                    <div class="checkmark">
-                    <label><input type="checkbox" id="ayam" name="bahan" value="ayam">
-                      Ayam &nbsp&nbsp</label>
-                    <label><input type="checkbox" id="daging" name="bahan" value="daging">
-                      Daging &nbsp&nbsp</label>
-                    <label><input type="checkbox" id="ikan" name="bahan" value="ikan">
-                      Ikan &nbsp&nbsp</label>
-                    <label><input type="checkbox" id="sotong" name="bahan" value="sotong">
-                      Sotong &nbsp&nbsp</label>
-                    <label><input type="checkbox" id="udang" name="bahan" value="udang">
-                      Udang &nbsp&nbsp</label>
-                    <label><input type="checkbox" id="ketam" name="bahan" value="ketam">
-                      Ketam &nbsp&nbsp</label>
-                    <label><input type="checkbox" id="telur7" name="bahan" value="telur">
-                      Telur &nbsp&nbsp</label><br>
-                    <label><input type="checkbox" id="madu" name="bahan" value="madu">
-                      Madu &nbsp&nbsp</label>
-                    <label><input type="checkbox" id="keju" name="bahan" value="keju">
-                      Keju &nbsp&nbsp</label>
-                    <label><input type="checkbox" id="tomato" name="bahan" value="tomato">
-                      Tomato &nbsp&nbsp</label>
-                    <label><input type="checkbox" id="lemon" name="bahan" value="lemon">
-                      Lemon &nbsp&nbsp</label>
-                    <label><input type="checkbox" id="kentang" name="bahan" value="kentang">
-                      Kentang &nbsp&nbsp</label>
-                    <label><input type="checkbox" id="cendawan" name="bahan" value="cendawan">
-                      Cendawan &nbsp&nbsp</label><br>
-                    <label><input type="checkbox" id="cilikering" name="bahan" value="cilikering">
-                      Cili Kering &nbsp&nbsp</label>
-                    <label><input type="checkbox" id="ciliapi" name="bahan" value="ciliapi">
-                      Cili Api &nbsp&nbsp</label>
-                    <label><input type="checkbox" id="cilibesar" name="bahan" value="cilibesar">
-                      Cili Besar &nbsp&nbsp</label>
-                    <label><input type="checkbox" id="serbukcili" name="bahan" value="serbukcili">
-                      Serbuk Cili &nbsp&nbsp</label>
-                    <label><input type="checkbox" id="serbukkari" name="bahan" value="serbukkari">
-                      Serbuk Kari &nbsp&nbsp</label>
-                    <label><input type="checkbox" id="perencahsup" name="bahan" value="perencahsup">
-                      Perencah Sup &nbsp&nbsp</label><br>
-                    <label><input type="checkbox" id="daunkesum" name="bahan" value="daunkesum">
-                      Daun Kesum &nbsp&nbsp</label>
-                    <label><input type="checkbox" id="daunkari" name="bahan" value="daunkari">
-                      Daun Kari &nbsp&nbsp</label>
-                    <label><input type="checkbox" id="daunlimau" name="bahan" value="daunlimau">
-                      Daun Limau Purut &nbsp&nbsp</label>
-                    <label><input type="checkbox" id="daunsup" name="bahan" value="daunsup">
-                      Daun Sup &nbsp&nbsp</label>
-                    <label><input type="checkbox" id="daunkunyit" name="bahan" value="daunkunyit">
-                      Daun Kunyit &nbsp&nbsp</label>
-                    <label><input type="checkbox" id="serai" name="bahan" value="serai">
-                      Serai &nbsp&nbsp</label><br>
-                    <label><input type="checkbox" id="susucair" name="bahan" value="susucair">
-                      Susu cair &nbsp&nbsp</label>
-                    <label><input type="checkbox" id="santan" name="bahan" value="santan">
-                      Santan &nbsp&nbsp</label>
-                    <label><input type="checkbox" id="sususegar" name="bahan" value="sususegar">
-                      Susu Segar&nbsp&nbsp</label>
-                    <label><input type="checkbox" id="butter" name="bahan" value="butter">
-                      Butter &nbsp&nbsp</label><br>
-                    <label><input type="checkbox" id="kicapmasin" name="bahan" value="kicapmasin">
-                      Kicap Masin &nbsp&nbsp</label>
-                    <label><input type="checkbox" id="kicapmanis" name="bahan" value="kicapmanis">
-                      Kicap Manis &nbsp&nbsp</label>
-                    <label><input type="checkbox" id="kicaplemak" name="bahan" value="kicaplemak">
-                      Kicap Lemak &nbsp&nbsp</label><br>
-                    <label><input type="checkbox" id="soscili" name="bahan" value="soscili">
-                      Sos Cili &nbsp&nbsp</label>
-                    <label><input type="checkbox" id="sostomato" name="bahan" value="sostomato">
-                      Sos Tomato &nbsp&nbsp</label>
-                    <label><input type="checkbox" id="sostiram" name="bahan" value="sostiram">
-                      Sos Tiram &nbsp&nbsp</label>
-                    <label><input type="checkbox" id="ladahitam" name="bahan" value="ladahitam">
-                      Lada Hitam &nbsp&nbsp</label>
-                    <label><input type="checkbox" id="ladasulah" name="bahan" value="ladasulah">
-                      Lada Sulah &nbsp&nbsp</label><br>
-                    <label><input type="checkbox" id="limaukasturi" name="bahan" value="limaukasturi">
-                      Limau Kasturi &nbsp&nbsp</label>
-                    <label><input type="checkbox" id="imaunipis" name="bahan" value="limaunipis">
-                      Limau Nipis &nbsp&nbsp</label>
-                    <label><input type="checkbox" id="asamajawa" name="bahan" value="asamajawa">
-                      Asam jawa &nbsp&nbsp</label><br>
-                    <label><input type="checkbox" id="tepunggandum" name="bahan" value="tepunggandum">
-                      Tepung Gandum &nbsp&nbsp</label>
-                    <label><input type="checkbox" id="tepungjagung" name="bahan" value="tepungjagung">
-                      Tepung Jagung &nbsp&nbsp</label>
-                    <label><input type="checkbox" id="tepungberas" name="bahan" value="tepungberas">
-                      Tepung Beras &nbsp&nbsp</label><br>
-                    </div>
-                   <input type="text" id="bahan" name="bahanmasakan" placeholder="Tambah bahan anda...">
-                   <button onclick="resepi()" style="font-weight:bold" class="ml-2 btn btn-white btn-outline-black"/>Cari Resepi</button>
-                  </form>
       </div>
-    </section><br><br><br>
-
-  <?php
-if (isset($_POST["submit"])) {
-if (!empty($_POST["bahan"])) {
-  foreach ($dataResult as $recipe_id){
-      echo "<tr>";
-      echo "<td> $recipe_id->recipe_title </td>";
-      echo "<td><a href=$recipe_id->recipe_link><font color=#3498DB>Dapatkan!</font></a></td>";
-      echo "</tr>";
-  }
-}
-  else {
-    echo "Please select at least one language";
-  }
-}
-   ?>
+      <div class="container-wrap">
+        <div class="row no-gutters d-flex" >
+          <div class="col-lg-4 d-flex ftco-animate">
+            <div class="services-wrap d-flex">
+              <div class="text p-4" style="width:425px;height:550px">
+                <div class="checkmark">
+                <h3>Bahan Utama</h3>
+                <label><input type="checkbox" id="nasi" name="bahan" value="nasi">
+                  Nasi &nbsp&nbsp</label>
+                <label><input type="checkbox" id="ayam" name="bahan" value="ayam">
+                  Ayam &nbsp&nbsp</label>
+                <label><input type="checkbox" id="daging" name="bahan" value="daging">
+                  Daging &nbsp&nbsp</label>
+                <label><input type="checkbox" id="ikan" name="bahan" value="ikan">
+                  Ikan &nbsp&nbsp</label>
+                <label><input type="checkbox" id="sotong" name="bahan" value="sotong">
+                  Sotong &nbsp&nbsp</label>
+                <label><input type="checkbox" id="udang" name="bahan" value="udang">
+                  Udang &nbsp&nbsp</label>
+                <label><input type="checkbox" id="ketam" name="bahan" value="ketam">
+                  Ketam &nbsp&nbsp</label>
+                <label><input type="checkbox" id="telur7" name="bahan" value="telur">
+                  Telur &nbsp&nbsp</label>
+                </div>
+                </div>
+            </div>
+          </div><br>
+          <div class="col-lg-4 d-flex ftco-animate">
+            <div class="services-wrap d-flex">
+              <div class="text p-4" style="width:425px;height:550px">
+                <div class="checkmark">
+                <h3>Sayur Sayuran / Buah buahan</h3>
+                <label><input type="checkbox" id="kangkung" name="bahan" value="kangkung">
+                  Kangkung &nbsp&nbsp</label>
+                <label><input type="checkbox" id="sawi" name="bahan" value="sawi">
+                  Sawi &nbsp&nbsp</label>
+                <label><input type="checkbox" id="bayam" name="bahan" value="bayam">
+                  Bayam &nbsp&nbsp</label>
+                <label><input type="checkbox" id="kobis" name="bahan" value="kobis">
+                  Kobis &nbsp&nbsp</label>
+                <label><input type="checkbox" id="Kacangpanjang" name="bahan" value="kacangpanjang">
+                  Kacang Panjang &nbsp&nbsp</label>
+                <label><input type="checkbox" id="terung" name="bahan" value="terung">
+                  Terung &nbsp&nbsp</label>
+                <label><input type="checkbox" id="petola" name="bahan" value="petola">
+                  Petola &nbsp&nbsp</label>
+                <label><input type="checkbox" id="tomato" name="bahan" value="tomato">
+                  Tomato &nbsp&nbsp</label>
+                <label><input type="checkbox" id="lemon" name="bahan" value="lemon">
+                  Lemon &nbsp&nbsp</label>
+                <label><input type="checkbox" id="kentang" name="bahan" value="kentang">
+                  Kentang &nbsp&nbsp</label>
+                <label><input type="checkbox" id="cendawan" name="bahan" value="cendawan">
+                  Cendawan &nbsp&nbsp</label>
+                <label><input type="checkbox" id="serai" name="bahan" value="serai">
+                  Serai &nbsp&nbsp</label>
+                <label><input type="checkbox" id="limaukasturi" name="bahan" value="limaukasturi">
+                  Limau Kasturi &nbsp&nbsp</label>
+                <label><input type="checkbox" id="limaunipis" name="bahan" value="limaunipis">
+                  Limau Nipis &nbsp&nbsp</label>
+                <label><input type="checkbox" id="mangga" name="bahan" value="limaunipis">
+                  Mangga &nbsp&nbsp</label>
+                 </div>
+               </div>
+            </div>
+          </div><br>
+          <div class="col-lg-4 d-flex ftco-animate">
+            <div class="services-wrap d-flex">
+              <div class="text p-4" style="width:425px;height:550px">
+                <div class="checkmark">
+                <h3> Sos </h3>
+                <label><input type="checkbox" id="kicapmasin" name="bahan" value="kicapmasin">
+                  Kicap Masin &nbsp&nbsp</label>
+                <label><input type="checkbox" id="soscili" name="bahan" value="soscili">
+                  Sos Cili &nbsp&nbsp</label>
+                <label><input type="checkbox" id="kicapmanis" name="bahan" value="kicapmanis">
+                  Kicap Manis &nbsp&nbsp</label>
+                <label><input type="checkbox" id="sostiram" name="bahan" value="sostiram">
+                  Sos Tiram &nbsp&nbsp</label>
+                <label><input type="checkbox" id="kicaplemak" name="bahan" value="kicaplemak">
+                  Kicap Lemak &nbsp&nbsp</label>
+                <label><input type="checkbox" id="sostomato" name="bahan" value="sostomato">
+                  Sos Tomato &nbsp&nbsp</label>
+                 </div>
+               </div>
+            </div>
+          </div><br>
+          <div class="col-lg-4 d-flex ftco-animate">
+            <div class="services-wrap d-flex">
+              <div class="text p-4" style="width:425px;height:450px">
+                <div class="checkmark">
+                <h3>Tenusu</h3>
+                <label><input type="checkbox" id="keju" name="bahan" value="keju">
+                  Keju &nbsp&nbsp</label>
+                  <label><input type="checkbox" id="susucair" name="bahan" value="susucair">
+                    Susu cair &nbsp&nbsp</label>
+                  <label><input type="checkbox" id="santan" name="bahan" value="santan">
+                    Santan &nbsp&nbsp</label>
+                  <label><input type="checkbox" id="sususegar" name="bahan" value="sususegar">
+                    Susu Segar&nbsp&nbsp</label>
+                  <label><input type="checkbox" id="butter" name="bahan" value="butter">
+                    Butter &nbsp&nbsp</label>
+                </div>
+              </div>
+            </div>
+          </div><br>
+          <div class="col-lg-4 d-flex ftco-animate">
+            <div class="services-wrap d-flex">
+              <div class="text p-4" style="width:425px;height:450px">
+                <div class="checkmark">
+                <h3>Perasa</h3>
+                <label><input type="checkbox" id="cilikering" name="bahan" value="cilikering">
+                  Cili Kering &nbsp&nbsp</label>
+                <label><input type="checkbox" id="ciliapi" name="bahan" value="ciliapi">
+                  Cili Api &nbsp&nbsp</label>
+                <label><input type="checkbox" id="cilibesar" name="bahan" value="cilibesar">
+                  Cili Besar &nbsp&nbsp</label>
+                <label><input type="checkbox" id="ladahitam" name="bahan" value="ladahitam">
+                  Lada Hitam &nbsp&nbsp</label>
+                <label><input type="checkbox" id="ladasulah" name="bahan" value="ladasulah">
+                  Lada Sulah &nbsp&nbsp</label>
+                <label><input type="checkbox" id="perencahsup" name="bahan" value="perencahsup">
+                  Perencah Sup &nbsp&nbsp</label>
+                <label><input type="checkbox" id="asamajawa" name="bahan" value="asamajawa">
+                  Asam jawa &nbsp&nbsp</label>
+                <label><input type="checkbox" id="serbukcili" name="bahan" value="serbukcili">
+                  Serbuk Cili &nbsp&nbsp</label>
+                <label><input type="checkbox" id="serbukkari" name="bahan" value="serbukkari">
+                    Serbuk Kari &nbsp&nbsp</label>
+              </div>
+            </div>
+            </div>
+          </div><br>
+          <div class="col-lg-4 d-flex ftco-animate">
+            <div class="services-wrap d-flex">
+              <div class="text p-4" style="width:425px;height:450px">
+                <h3>Bijirin / Sampingan</h3>
+                <label><input type="checkbox" id="tepunggandum" name="bahan" value="tepunggandum">
+                  Tepung Gandum &nbsp&nbsp</label>
+                <label><input type="checkbox" id="tepungjagung" name="bahan" value="tepungjagung">
+                  Tepung Jagung &nbsp&nbsp</label>
+                <label><input type="checkbox" id="tepungberas" name="bahan" value="tepungberas">
+                  Tepung Beras &nbsp&nbsp</label>
+                <label><input type="checkbox" id="madu" name="bahan" value="madu">
+                  Madu &nbsp&nbsp</label>
+                <label><input type="checkbox" id="daunkesum" name="bahan" value="daunkesum">
+                  Daun Kesum &nbsp&nbsp</label>
+                <label><input type="checkbox" id="daunkari" name="bahan" value="daunkari">
+                  Daun Kari &nbsp&nbsp</label>
+                <label><input type="checkbox" id="daunlimau" name="bahan" value="daunlimau">
+                  Daun Limau Purut &nbsp&nbsp</label>
+                <label><input type="checkbox" id="daunsup" name="bahan" value="daunsup">
+                  Daun Sup &nbsp&nbsp</label>
+                <label><input type="checkbox" id="daunkunyit" name="bahan" value="daunkunyit">
+                  Daun Kunyit &nbsp&nbsp</label>
+                </div>
+            </div>
+          </div><br>
+          </div>
+          </div>
+      </div>
+      </div><br><br>
+      <center>
+      <input type="submit" value="Cari Resepi !" style="font-weight:bold;font-size:20px" class="ml-2 btn btn-white btn-outline-black"/>
+    </center>
+     </form>
+      </section>
+      <br><br><br>
 
 
     <section class="ftco-menu">
@@ -336,6 +362,17 @@ if (!empty($_POST["bahan"])) {
   }
   </style>
 
+  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+  <script>
+    window.OneSignal = window.OneSignal || [];
+    OneSignal.push(function() {
+      OneSignal.init({
+        appId: "a112f057-a98c-4a99-95ef-b6e14bef1d78",
+      });
+    });
+  </script>
+
+    <script src="/lesungbatu/public/js/forwardchaining.js"></script>
   <script src="/lesungbatu/public/js/jquery.min.js"></script>
   <script src="/lesungbatu/public/js/jquery-migrate-3.0.1.min.js"></script>
   <script src="/lesungbatu/public/js/popper.min.js"></script>

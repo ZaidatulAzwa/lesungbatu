@@ -37,7 +37,7 @@
 		      </button>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item active"><a href="/lesungbatu" class="nav-link">Laman Utama</a></li>
+	          <li class="nav-item active"><a href="/lesungbatu/users" class="nav-link">Laman Utama</a></li>
             <li class="nav-item"><a href="bahanmasakan" class="nav-link">Bahan Masakan</a></li>
 	          <li class="nav-item"><a href="jenismasakan" class="nav-link">Jenis Masakan</a></li>
 	          <li class="nav-item"><a href="kegemaranuser" class="nav-link">Kegemaran</a></li>
@@ -47,51 +47,19 @@
 	  </nav>
     <!-- END nav -->
 
-    <section class="home-slider owl-carousel img" style="background-image: url(/lesungbatu/public/images/bg_1.jpg);">
-      <div class="slider-item">
+    <section  style="background-image: url(/lesungbatu/public/images/bg_1.jpg);height:600px">
+      <div class="slider-item"><br><br><br><br>
       	<div class="overlay"></div>
         <div class="container">
           <div class="row slider-text align-items-center" data-scrollax-parent="true">
 
-            <div class="col-md-6 col-sm-12 ftco-animate">
-              <span class="subheading">Keenakan Dirasa</span>
-              <h1 class="mb-4">Dapatkan resepi menarik mengikut bahan masakan anda !</h1>
-            </div>
+            <div class="col-md-6 col-sm-12 ftco-animate" style="text-align:center;">
+            	<span class="subheading"><h1  style="font-style: bold">Keenakan Dirasa</h1></span><br>
+              <h3 class="mb-4"  style="font-style: italic">Dapatkan resepi menarik mengikut bahan masakan anda </h3>
+              </div>
             <div class="col-md-6 ftco-animate">
-              <img src="/lesungbatu/public/images/gif1.gif" class="img-fluid" alt="">
+            	<img src="/lesungbatu/public/images/gif1.gif" class="img-fluid" alt="" >
             </div>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="slider-item">
-        <div class="overlay"></div>
-        <div class="container">
-          <div class="row slider-text align-items-center" data-scrollax-parent="true">
-
-            <div class="col-md-6 col-sm-12 order-md-last ftco-animate">
-              <span class="subheading">Kerangupan Terasa</span>
-              <h1 class="mb-4">Resepi terhebat dengan bahan masakan sedia ada !</h1>
-            </div>
-            <div class="col-md-6 ftco-animate">
-              <img src="/lesungbatu/public/images/gif.gif" class="img-fluid" alt="">
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="slider-item" style="background-image: url(/lesungbatu/public/images/bg_3.jpg);">
-      	<div class="overlay"></div>
-        <div class="container">
-          <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
-
-            <div class="col-md-7 col-sm-12 text-center ftco-animate">
-            	<span class="subheading">LesungBatu Terhebat</span>
-              <h1 class="mb-4">Resepi disedia mudah, masakan anda juga menjadi mudah !</h1>
-            </div>
-
           </div>
         </div>
       </div>
@@ -103,18 +71,18 @@
           <div class="info">
             <div class="row no-gutters">
               <div class="col-md-4 d-flex ftco-animate">
-          <div class="icon"><span class="icon-phone"></span></div>
+          <div class="icon"><i class="fa fa-sign-out" aria-hidden="true"></i></div>
           <div class="dropup">
-          <button class="dropbtn"><a href="logout" id="customer_login_link"  style="color:white">Logout</a></button>
+          <button class="dropbtn"></i><a href="logout" id="customer_login_link"  style="color:white">Logout</a></button>
           </div>
         </div>
         <div class="col-md-4 d-flex ftco-animate">
-          <div class="icon"><span class="icon-my_location"></span></div>
+          <div class="icon"><span class="icon-profile"></span></div>
           <div class="dropup">
           <button class="dropbtn">Profile</button>
           <div class="dropup-content">
-            <a href="update/yourusername">Update Profile</a>
-            <a href="delete/success">Delete Profile</a>
+            <a href="update/izati97">Update Profile</a>
+            <a href="delete/mawar">Delete Profile</a>
           </div>
         </div>
         </div>
@@ -296,6 +264,16 @@
     background-color: black;
   }
   </style>
+
+  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+  <script>
+    window.OneSignal = window.OneSignal || [];
+    OneSignal.push(function() {
+      OneSignal.init({
+        appId: "a112f057-a98c-4a99-95ef-b6e14bef1d78",
+      });
+    });
+  </script>
 
   <script src="/lesungbatu/public/js/jquery.min.js"></script>
   <script src="/lesungbatu/public/js/jquery-migrate-3.0.1.min.js"></script>

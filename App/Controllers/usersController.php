@@ -70,12 +70,12 @@ class usersController{
 			 view::render('users/resepiuser', ['dataResult'=> $dataResult]);
 	 }
 
-	 public static function u10(){
+	 public static function k(){
 
-	 $dataResult = usersModel::getoneRow();
-		view::render('users/kegemaranusers',['singleRow'=>$dataResult]);
-
-	}
+ 			 $dataResult = usersModel::get();
+ 			 //pre($dataResult);
+ 			 view::render('users/kegemaranusers', ['dataResult'=> $dataResult]);
+ 	 }
 
 }
 ?>

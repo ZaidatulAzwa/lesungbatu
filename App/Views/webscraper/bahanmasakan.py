@@ -6,7 +6,7 @@ conn = mysql.connector.connect(user="root", passwd="", host="localhost", databas
 
 cursor = conn.cursor()
 
-sql = "INSERT INTO bahanmasakan (recipe_title, recipe_link) VALUES (%s, %s)"
+sql = "INSERT INTO ayam (recipe_title, recipe_link) VALUES (%s, %s)"
 
 def crawl_url(pageUrl, recipe_arr) :
     url = 'https://resepi.my/category/ayam/'
@@ -39,7 +39,7 @@ conn = mysql.connector.connect(user="root", passwd="", host="localhost", databas
 
 cursor = conn.cursor()
 
-sql = "INSERT INTO bahanmasakan (recipe_title, recipe_link) VALUES (%s, %s)"
+sql = "INSERT INTO ayam (recipe_title, recipe_link) VALUES (%s, %s)"
 
 def crawl_url(pageUrl, recipe_arr) :
     url6 = 'https://resepichenom.com/kategori/ayam/show'
@@ -299,11 +299,16 @@ conn.commit()
 cursor.close()
 conn.close()
 
+
+from bs4 import BeautifulSoup
+from requests import get
+import mysql.connector
+
 conn = mysql.connector.connect(user="root", passwd="", host="localhost", database="lesungbatu")
 
 cursor = conn.cursor()
 
-sql = "INSERT INTO bahanmasakan (recipe_title, recipe_link) VALUES (%s, %s)"
+sql = "INSERT INTO nasi (recipe_title, recipe_link) VALUES (%s, %s)"
 
 def crawl_url(pageUrl, recipe_arr) :
     url5 = 'https://resepi.my/category/nasi/'
@@ -336,7 +341,7 @@ conn = mysql.connector.connect(user="root", passwd="", host="localhost", databas
 
 cursor = conn.cursor()
 
-sql = "INSERT INTO bahanmasakan (recipe_title, recipe_link) VALUES (%s, %s)"
+sql = "INSERT INTO nasi (recipe_title, recipe_link) VALUES (%s, %s)"
 
 def crawl_url(pageUrl, recipe_arr) :
     url11 = 'https://resepichenom.com/kategori/nasi/show'
